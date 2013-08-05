@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>A Maturity Model for Continuous Delivery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="A Maturity Model for Continuous Delivery" />
+        <meta name="keywords" content="continuous delivery"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    </head>
+    <style>
+        #content{
+            width:1750px;
+            margin:0 auto;
+        }
+        #content h1{
+            font-family:"Trebuchet MS",sans-serif;
+            font-size:30px;
+            font-style:normal;
+            margin:40px 0px 30px -40px;
+            padding:0px 40px;
+            clear:both;
+            float:left;
+            width:100%;
+            color:#aaa;
+            text-shadow:1px 1px 1px #fff;
+        }
+
+    </style>
+    <body>
+        <div id="content">
+            <h1>A Maturity Model for Continuous Delivery</h1>
+            
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th scope="col" abbr="Process & Organisation">Process & Organisation</th>
+                        <th scope="col" abbr="Technology">Technology</th>
+                        <th scope="col" abbr="Quality assurance">Quality assurance</th>
+                        <th scope="col" abbr="Deployment routines">Deployment routines</th>
+                        <th scope="col" abbr="Configuration management">Configuration management</th>
+                        <th scope="col" abbr="Build & CI">Build & CI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Advanced</th>
+			<td><b>Self organised and cross functional.</b>
+                            <br>The team can solve any task.
+                            <br>Releases continuously.
+                            <br>Continuous improvement.
+                            <br>DevOps!
+                        </td>
+                        <td><b>"Loose" architecture.</b>
+                            <br>It is easy to replace technology for the benefit of something better ("Branch by abstraction").
+                        </td>
+                        <td><b>"All" testing automated.</b>
+                            <br>Almost all testing is automated, also for non-functional requirements.
+                            <br>Testing of infrastructure code.
+                            <br>Health monitoring for applications and environments and proactive handling of problems.
+                        </td>
+                        <td><b>One-click deploy.</b>
+                            <br>All (including the customer) can deploy with one click.
+                            <br>0-downtime deploy.
+                            <br>Feedback on database performance and deployment for each release.
+                        </td>
+                        <td><b>Infrastructure as code.</b>
+                            <br>Fully automated provisioning and validation of environments.
+                            <br>Orchestration of environments.
+                        </td>
+                        <td><b>Build/deploy pipeline.</b>
+                            <br>Same binary is deployed to all environments.
+                            <br>Continuous improvement and automation of repeating tasks.
+                            <br>Optimised for rapid feedback and visualisation of integration problems.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Intermediate</th>
+                        <td><b>Pull-based process.</b>
+                            <br>Measurement and reduction of cycle time.
+                            <br>Continuous focus on process improvement.
+                            <br>Allways production ready code.
+                        </td>
+                        <td><b>Simple technology.</b>
+                            <br>Knowledge about all technology; why it is used, what it does and why that version.
+                            <br>All technology is easy to configure and script against.
+                            <br>Technology that makes it simple to roll back and forth between database versions.
+                        </td>
+                        <td><b>Automated functional tests.</b>
+                            <br>Automated acceptance- and system tests.
+                            <br>Tests are written as part of requirements specification.
+                            <br>All stakeholders specify tests.
+                        </td>
+                        <td><b>Automated deploy.</b>
+                            <br>Same process for deploy to all environments.
+                            <br>"Feature toggling" to switch on/off functionality in production.
+                            <br>Release and rollback is tested.
+                            <br>Database migration and rollback is automated and tested for each deploy.
+                            <br>Database performance is monitored and optimised.
+                        </td>
+                        <td><b>Application configuration control.</b>
+                            <br>All application configuration in version control.
+                            <br>The application is configured in one place.
+                        </td>
+                        <td><b>Continuous integration</b>
+                            <br>Continuous integration of source code to mainline.
+                            <br>All changes (code, configuration, environments, etc.) triggers the feedback mechanisms.
+                            <br>Artifact repository.
+                            <br>Reuse of scripts and tools.
+                            <br>Generation of reports for the build.
+                            <br>Builds that fail are fixed immidiately.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Baseline</th>
+                        <td><b>Agile 101.</b>
+                            <br>Improved communication with business.
+                            <br>Releases after each iteration.
+                            <br>Developers have access to production logs.
+                        </td>
+                        <td><b>Best-of-breed.</b>
+                            <br>Chooses technology stack based on what is best for each purpose.
+                            <br>Chooses preferably Open Source.
+                            <br>Avoids products that causes vendor lock-in.
+                        </td>
+                        <td><b>Automated technical tests.</b>
+                            <br>Automated unit- and integration tests.
+                        </td>
+                        <td><b>Repeatable deploy.</b>
+                            <br>Documented and partially automated deploy.
+                            <br>Database changes are scripted and versioned.
+                        </td>
+                        <td><b>Dependency control.</b>
+                            <br>Dependencies and libraries are defined in version control.
+                        </td>
+                        <td><b>CI-server</b>
+                            <br>Automation of builds/tests on CI server.
+                            <br>Can recreate builds from source code.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Big challenges</th>
+                        <td><b>Silo organisation.</b>
+                            <br>People which in some way depend on each others work are not sitting together.
+                            <br>Infrequent releases.
+                            <br>Developers do not have access to production logs.
+                        </td>
+                        <td><b>"Enterprise" infrastructure.</b>
+                            <br>Technology that can only be configured via a GUI.
+                            <br>Large "enterprise" suites claiming they can solve all your problems.
+                        </td>
+                        <td><b>Manual testing.</b>
+                            <br>Test department.
+                            <br>Testing towards the end, not continuously.
+                            <br>Developers do not test.
+                        </td>
+                        <td><b>Manual deploy.</b>
+                            <br>Deployments require many manual steps.
+                            <br>Manual and unversioned database migrations.
+                        </td>
+                        <td><b>Manual configuration.</b>
+                            <br>Manual configuration in each environment and on each server.
+                        </td>
+                        <td><b>Manual routines</b>
+                            <br>Manual routines for builds.
+                            <br>Lacks artifact repository.
+                            <br>Lacks reports.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
